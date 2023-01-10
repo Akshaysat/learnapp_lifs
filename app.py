@@ -11,7 +11,7 @@ from google.oauth2 import service_account
 from gsheetsdb import connect
 
 # set page config
-st.set_page_config(page_title="LearnApp", page_icon="favicon.png")
+st.set_page_config(page_title="LearnApp", page_icon="favicon_.png")
 
 # hide streamlit branding and hamburger menu
 hide_streamlit_style = """
