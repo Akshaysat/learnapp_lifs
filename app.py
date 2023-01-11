@@ -364,7 +364,9 @@ except:
             st.success("You're doing great. Keep up the consistency!")
 
         else:
-            st.info("Please complete the pending courses to join leaderboard toppers")
+            st.info(
+                "Please complete any pending course & attend the live class completely to increase your score & join leaderboard toppers"
+            )
 
         st.write("-----")
         st.subheader("Your Schedule")
