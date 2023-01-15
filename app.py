@@ -160,7 +160,7 @@ def workshop_container(day_no, date, workshop_name, workshop_jpeg, agenda, zoom_
             except:
                 recording_score = 0
 
-            if recording_score > 5:
+            if recording_score >= 0:
 
                 if recording_link == None:
                     st.write("⌛ Uploading...")
@@ -343,30 +343,30 @@ except:
     )
 
     if st.button("Show my progress"):
-        st.write("-----")
-        st.subheader("Your Stats")
-        try:
-            user_score = df[df["Email"] == email_id]["Score"].iloc[0]
+        # st.write("-----")
+        # st.subheader("Your Stats")
+        # try:
+        #     user_score = df[df["Email"] == email_id]["Score"].iloc[0]
 
-        except:
-            user_score = 0
+        # except:
+        #     user_score = 0
 
-        leaderboard_cutoff = df["Score"].iloc[20]
+        # leaderboard_cutoff = df["Score"].iloc[20]
 
-        col1, col2 = st.columns(2)
-        with col1:
-            st.metric("Your Score", user_score)
-        with col2:
-            st.metric("Leaderboard Cutoff", leaderboard_cutoff)
+        # col1, col2 = st.columns(2)
+        # with col1:
+        #     st.metric("Your Score", user_score)
+        # with col2:
+        #     st.metric("Leaderboard Cutoff", leaderboard_cutoff)
 
-        st.write("")
-        if user_score >= leaderboard_cutoff:
-            st.success("You're doing great. Keep up the consistency!")
+        # st.write("")
+        # if user_score >= leaderboard_cutoff:
+        #     st.success("You're doing great. Keep up the consistency!")
 
-        else:
-            st.info(
-                "Please complete any pending course & attend the live class completely to increase your score & join leaderboard toppers"
-            )
+        # else:
+        #     st.info(
+        #         "Please complete any pending course & attend the live class completely to increase your score & join leaderboard toppers"
+        #     )
 
         st.write("-----")
         st.subheader("Your Schedule")
