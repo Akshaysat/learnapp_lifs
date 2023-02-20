@@ -190,7 +190,7 @@ def schedule_container():
 
     workshop_container(
         "Day 00",
-        dt.datetime(2023, 1, 9, 9, 0, 0),
+        dt.datetime(2023, 2, 20, 9, 0, 0),
         "Kickoff Session",
         "workshop/kick-off-session.jpeg",
         "Meet your mentors and peers, 10 day schedule and program outcomes",
@@ -198,11 +198,11 @@ def schedule_container():
     )
 
     course_key = "basics-of-personal-finance"
-    course_container("Day 01", dt.datetime(2023, 1, 10, 9, 0, 0), course_key)
+    course_container("Day 01", dt.datetime(2023, 2, 21, 9, 0, 0), course_key)
 
     workshop_container(
         "Day 02",
-        dt.datetime(2023, 1, 11, 9, 0, 0),
+        dt.datetime(2023, 2, 22, 9, 0, 0),
         "Create your own Personal Budget",
         "workshop/basics-of-personal-finance.jpeg",
         "Budget creation, emergency fund and goal planning",
@@ -210,11 +210,11 @@ def schedule_container():
     )
 
     course_key = "asset-allocation-strategy"
-    course_container("Day 03", dt.datetime(2023, 1, 12, 9, 0, 0), course_key)
+    course_container("Day 03", dt.datetime(2023, 2, 23, 9, 0, 0), course_key)
 
     workshop_container(
         "Day 04",
-        dt.datetime(2023, 1, 13, 9, 0, 0),
+        dt.datetime(2023, 2, 24, 9, 0, 0),
         "Build your Personal Asset Allocation Strategy",
         "workshop/asset-allocation-strategy.jpeg",
         "Learn to calculate: CAGR, XIRR and Sharpe Ratio",
@@ -223,7 +223,7 @@ def schedule_container():
 
     workshop_container(
         "Day 05",
-        dt.datetime(2023, 1, 16, 9, 0, 0),
+        dt.datetime(2023, 2, 27, 9, 0, 0),
         "Learn softwares for Stock Analysis",
         "workshop/tool-box-101.jpeg",
         "Learn to use softwares used for analysis",
@@ -231,11 +231,11 @@ def schedule_container():
     )
 
     course_key = "long-india-portfolio-"
-    course_container("Day 06", dt.datetime(2023, 1, 17, 9, 0, 0), course_key)
+    course_container("Day 06", dt.datetime(2023, 2, 28, 9, 0, 0), course_key)
 
     workshop_container(
         "Day 07",
-        dt.datetime(2023, 1, 18, 9, 0, 0),
+        dt.datetime(2023, 3, 1, 9, 0, 0),
         "Build your Long India Portfolio",
         "workshop/long-india-portfolio-.jpeg",
         "Futuristic themes in India, Stock selection using screener, Entry & Exit criteria",
@@ -243,11 +243,11 @@ def schedule_container():
     )
 
     course_key = "long-term-momentum-strategy"
-    course_container("Day 08", dt.datetime(2023, 1, 19, 9, 0, 0), course_key)
+    course_container("Day 08", dt.datetime(2023, 3, 2, 9, 0, 0), course_key)
 
     workshop_container(
         "Day 09",
-        dt.datetime(2023, 1, 20, 9, 0, 0),
+        dt.datetime(2023, 3, 3, 9, 0, 0),
         "Build your systematic investment portfolio",
         "workshop/systematic-investment-portoflio.jpeg",
         "Selection criteria, entry & exit rules",
@@ -263,7 +263,7 @@ def schedule_container():
     col1, col2 = st.columns(2)
     with col1:
         st.image("workshop/grad-day.jpeg", width=300)
-        st.caption(f"📅 21 Jan'23 | 🕒 09:00 AM")
+        st.caption(f"📅 04 Mar'23 | 🕒 09:00 AM")
 
     with col2:
 
@@ -318,13 +318,13 @@ def run_query(query):
     return rows
 
 
-sheet_url = st.secrets[f"private_gsheets_url_lifs-02"]
+sheet_url = st.secrets[f"private_gsheets_url_lifs-03"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 df = pd.DataFrame(rows)
 df.set_index("User_ID", inplace=True)
 df = df.sort_values("Score", ascending=False)
 
-recording_sheet_url = "https://docs.google.com/spreadsheets/d/1NkBcJv1PH1Bumjpf7tD1cK4Zt-QopU4nsFen3UI11qU/edit#gid=1961064199"
+recording_sheet_url = "https://docs.google.com/spreadsheets/d/1G5m1RSshA5tVivV3eRBQplQMH7Pb1NUi1eczvSUkz0o/edit#gid=1961064199"
 rows = run_query(f'SELECT * FROM "{recording_sheet_url}"')
 df_recording = pd.DataFrame(rows)
 
